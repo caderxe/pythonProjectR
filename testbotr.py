@@ -2,6 +2,7 @@ import telebot
 from telebot import types
 from telebot.types import KeyboardButton
 
+
 # TOKEN
 TOKEN = "1761768781:AAG3WIDomiWAuPEMOyr9y9wLsVE5CLpVOlo"
 
@@ -23,7 +24,7 @@ def open_website(message):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True,one_time_keyboard=True, row_width=5)
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=3)
     btn1 = KeyboardButton = types.KeyboardButton('Рамадан - месяц надежды')
     btn2 = types.KeyboardButton('4 награды в месяц Рамадан')
     btn3 = types.KeyboardButton('Нашид “Рамадану я Рамадан')
