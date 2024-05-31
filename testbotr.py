@@ -1,6 +1,6 @@
-import telegram
-from telegram import types
-from telegram import ReplyKeyboardMarkup, KeyboardButton
+import telebot
+from telebot import types
+from telebot.types import KeyboardButton
 
 # TOKEN
 TOKEN = "1761768781:AAG3WIDomiWAuPEMOyr9y9wLsVE5CLpVOlo"
