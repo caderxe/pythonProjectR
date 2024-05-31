@@ -1,7 +1,8 @@
-import telegram
-from telegram.ext import Updater, CommandHandler, KeyboardButton, MessageHandler, filters, types
+import telebot
+from telebot import types
+from telebot.types import KeyboardButton
 
-bot = telegram.Bot('1761768781:AAG3WIDomiWAuPEMOyr9y9wLsVE5CLpVOlo')
+bot = telebot.TeleBot('1761768781:AAG3WIDomiWAuPEMOyr9y9wLsVE5CLpVOlo')
 
 #вебсайт
 
