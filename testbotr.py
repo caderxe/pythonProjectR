@@ -1,6 +1,5 @@
 import telebot
 from telebot import types
-from telebot.types import KeyboardButton
 
 
 # TOKEN
@@ -79,5 +78,5 @@ if __name__ == '__main__':
         try:
             bot.polling(none_stop=True)
         except Exception as e:
-            time.sleep(None)
+            time.sleep(none_stop = True)
             print(e)
