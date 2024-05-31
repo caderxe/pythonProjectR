@@ -47,24 +47,19 @@ def func (message):
 #кнопка1
 
     if message.text == 'Рамадан - месяц надежды':
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard = True, row_width=5 )
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2 )
         bot.send_message(message.chat.id, text = 'Приятного просмотра ! https://youtu.be/MuHnPd6UJGI ', parse_mode='html', reply_markup=markup)
 
     if message.text == 'Нашид “Рамадану я Рамадан':
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard = True, row_width=5 )
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2 )
         bot.send_message(message.chat.id, text='Приятного просмотра ! https://www.youtube.com/watch?v=P10zaYYuBa4 ',
                          parse_mode='html', reply_markup=markup)
-
-
-
-
-
 
 
 #кнопка3
 
 
-    elif message.text == '4 награды в месяц Рамадан':
+    if message.text == '4 награды в месяц Рамадан':
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard = True, row_width=5 )
         btn1: KeyboardButton = types.KeyboardButton('Рамадан - месяц надежды')
         btn2 = types.KeyboardButton('4 награды в месяц Рамадан ')
