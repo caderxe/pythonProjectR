@@ -37,40 +37,39 @@ def open_website(message):
 
 
 
-
-
-
-
-
-
-@bot.message_handler(content_types=['text'])
+@bot.message_handler(func=lambda message:True)
 def func (message):
     get_message_bot = message.text.strip().lower()
 
 #кнопка1
 
     if message.text == 'Рамадан - месяц надежды':
-        markup = types.KeyboardButton(resize_keyboard=True, row_width=2 )
-        bot.send_message(message.chat.id, text = 'Приятного просмотра ! https://youtu.be/MuHnPd6UJGI ', parse_mode='html', reply_markup=markup)
+        bot.send_message(message.chat.id, 
+                         'Приятного просмотра ! https://youtu.be/MuHnPd6UJGI ', 
+                            parse_mode='html', reply_markup=markup)
 
     if message.text == 'Нашид “Рамадану я Рамадан':
-        markup = types.KeyboardButton(resize_keyboard=True, row_width=2 )
-        bot.send_message(message.chat.id, text='Приятного просмотра ! https://www.youtube.com/watch?v=P10zaYYuBa4 ',
-                         parse_mode='html', reply_markup=markup)
+         bot.send_message(message.chat.id,
+                          'Приятного просмотра ! https://www.youtube.com/watch?v=P10zaYYuBa4 ', 
+                          parse_mode='html', reply_markup=markup)
 
 
 #кнопка3
 
 
-    if message.text == '4 награды в месяц Рамадан':
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2 )
-        btn1: KeyboardButton = types.KeyboardButton('Рамадан - месяц надежды')
-        btn2 = types.KeyboardButton('4 награды в месяц Рамадан ')
-        bot.send_message(message.chat.id, text = 'Приятного чтения ! http://islam.ru/content/veroeshenie/55127?utm_referrer=https%3A%2F%2Fzen.yandex.com&utm_campaign=dbr', parse_mode='html', reply_markup=markup)
+    elif message.text == '4 награды в месяц Рамадан':
+        bot.send_message(message.chat.id, 
+                         'Приятного чтения ! http://islam.ru/content/veroeshenie/55127?utm_referrer=https%3A%2F%2Fzen.yandex.com&utm_campaign=dbr',
+                           parse_mode='html', reply_markup=markup)
 
 
-
-
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2 )
+    btn1 = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+    btn2 = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+    btn3 = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+    btn4 = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+    btn5 = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
+    btn6 = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
 
 
 
@@ -82,5 +81,5 @@ if __name__ == '__main__':
         try:
             bot.polling(none_stop=True)
         except Exception as e:
-            time.sleep(none_stop = True)
+            time.sleep(0)
             print(e)
