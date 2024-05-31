@@ -24,7 +24,7 @@ def open_website(message):
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    markup = types.ReplyKeyboardMarkup(row_width=2)
+    markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
     btn1 = types.KeyboardButton('Рамадан - месяц надежды')
     btn2 = types.KeyboardButton('4 награды в месяц Рамадан')
     btn3 = types.KeyboardButton('Нашид')
@@ -32,9 +32,9 @@ def start(message):
     btn5 = types.KeyboardButton('No name')
     btn6 = types.KeyboardButton('No name')
     markup.add(btn1 , btn2 , btn3, btn4, btn5, btn6 )
-    bot.send_message(message.chat.id,  send_mess,  parse_mode='html', reply_markup=markup)
+
     send_mess = f"<b> Мир вам ! {message.from_user.first_name} {message.from_user.last_name} </b>\nРекомендую посмотреть наш последний ролик , Рамадан - месяц надежды "
-    
+    bot.send_message(message.chat.id,  send_mess,  parse_mode='html', reply_markup=markup)
 
 
 
