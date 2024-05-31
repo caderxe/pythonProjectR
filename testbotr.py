@@ -19,7 +19,7 @@ def start(message):
     btn6 = types.KeyboardButton('No name')
     markup.add(btn1 , btn2 , btn3, btn4, btn5, btn6 )
 
-    send_mess = f"<b> Мир вам ! {message.from_user.first_name} {message.from_user.last_name} </b>\nРекомендую посмотреть наш последний ролик , Рамадан - месяц надежды "
+    send_mess = f"<b> Мир вашему дому  {message.from_user.first_name} {message.from_user.last_name} ! </b>\nРекомендую посмотреть наш последний ролик , Рамадан - месяц надежды "
     bot.send_message(message.chat.id,  send_mess,  parse_mode='html', reply_markup=markup)
 
 
@@ -81,5 +81,5 @@ if __name__ == '__main__':
         try:
             bot.polling(none_stop=True)
         except Exception as e:
-            time.sleep(0)
+            time.sleep(none_stop=True)
             print(e)
