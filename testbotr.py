@@ -1,4 +1,4 @@
-import telebot
+import telegram
 from telegram import types
 from telegram import ReplyKeyboardMarkup, KeyboardButton
 
