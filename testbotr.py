@@ -7,20 +7,7 @@ TOKEN = "1761768781:AAG3WIDomiWAuPEMOyr9y9wLsVE5CLpVOlo"
 
 bot = telebot.TeleBot(TOKEN)
 
-#вебсайт
-
-@bot.message_handler(commands=['website'])
-def open_website(message):
-    markup = types.InlineKeyboardMarkup()
-    markup.add(types.InlineKeyboardButton('Посетить сайт', url='http://islam.ru/content/veroeshenie/55127?utm_referrer=https%3A%2F%2Fzen.yandex.com&utm_campaign=dbr'))
-    bot.send_message(message.chat.id,"Отличный выбор, нажмите на кнопку чтоб прочитать статью", parse_mode='html', reply_markup=markup)
-
-
-
-
-
 #начальный
-
 @bot.message_handler(commands=['start'])
 def start(message):
     markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
@@ -36,6 +23,23 @@ def start(message):
     bot.send_message(message.chat.id,  send_mess,  parse_mode='html', reply_markup=markup)
 
 
+#вебсайт
+
+@bot.message_handler(commands=['website'])
+def open_website(message):
+    markup = types.InlineKeyboardMarkup()
+    markup.add(types.InlineKeyboardButton('Посетить сайт', url='http://islam.ru/content/veroeshenie/55127?utm_referrer=https%3A%2F%2Fzen.yandex.com&utm_campaign=dbr'))
+    bot.send_message(message.chat.id,"Отличный выбор, нажмите на кнопку чтоб прочитать статью", parse_mode='html', reply_markup=markup)
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -46,11 +50,11 @@ def func (message):
 #кнопка1
 
     if message.text == 'Рамадан - месяц надежды':
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2 )
+        markup = types.KeyboardButton(resize_keyboard=True, row_width=2 )
         bot.send_message(message.chat.id, text = 'Приятного просмотра ! https://youtu.be/MuHnPd6UJGI ', parse_mode='html', reply_markup=markup)
 
     if message.text == 'Нашид “Рамадану я Рамадан':
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2 )
+        markup = types.KeyboardButton(resize_keyboard=True, row_width=2 )
         bot.send_message(message.chat.id, text='Приятного просмотра ! https://www.youtube.com/watch?v=P10zaYYuBa4 ',
                          parse_mode='html', reply_markup=markup)
 
