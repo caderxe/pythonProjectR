@@ -60,7 +60,7 @@ def func (message):
 
 
     if message.text == '4 награды в месяц Рамадан':
-        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard = True, row_width=5 )
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2 )
         btn1: KeyboardButton = types.KeyboardButton('Рамадан - месяц надежды')
         btn2 = types.KeyboardButton('4 награды в месяц Рамадан ')
         bot.send_message(message.chat.id, text = 'Приятного чтения ! http://islam.ru/content/veroeshenie/55127?utm_referrer=https%3A%2F%2Fzen.yandex.com&utm_campaign=dbr', parse_mode='html', reply_markup=markup)
