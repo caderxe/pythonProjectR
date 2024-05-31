@@ -37,19 +37,19 @@ def open_website(message):
 
 
 
-@bot.message_handler(func=lambda message:True)
+@bot.message_handler(content_types=['text'])
 def func (message):
     get_message_bot = message.text.strip().lower()
 
 #кнопка1
 
     if message.text == 'Рамадан - месяц надежды':
-        bot.send_message(message.chat.id, 
+        bot.send_message(message.chat.id, text=
                          'Приятного просмотра ! https://youtu.be/MuHnPd6UJGI ', 
                             parse_mode='html', reply_markup=markup)
 
-    if message.text == 'Нашид “Рамадану я Рамадан':
-         bot.send_message(message.chat.id,
+    elif message.text == 'Нашид “Рамадану я Рамадан':
+         bot.send_message(message.chat.id, text=
                           'Приятного просмотра ! https://www.youtube.com/watch?v=P10zaYYuBa4 ', 
                           parse_mode='html', reply_markup=markup)
 
@@ -58,7 +58,7 @@ def func (message):
 
 
     elif message.text == '4 награды в месяц Рамадан':
-        bot.send_message(message.chat.id, 
+        bot.send_message(message.chat.id, text=
                          'Приятного чтения ! http://islam.ru/content/veroeshenie/55127?utm_referrer=https%3A%2F%2Fzen.yandex.com&utm_campaign=dbr',
                            parse_mode='html', reply_markup=markup)
 
@@ -81,5 +81,5 @@ if __name__ == '__main__':
         try:
             bot.polling(none_stop=True)
         except Exception as e:
-            time.sleep(none_stop=True)
+            time.sleep()
             print(e)
