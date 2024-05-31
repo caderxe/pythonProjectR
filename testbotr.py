@@ -1,6 +1,5 @@
 import telegram
-from telegram import types
-from telegram.types import KeyboardButton
+from telegram.ext import Updater, CommandHandler, MessageHandler, filters 
 
 bot = telegram.Bot('1761768781:AAG3WIDomiWAuPEMOyr9y9wLsVE5CLpVOlo')
 
