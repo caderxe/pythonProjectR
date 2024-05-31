@@ -14,7 +14,7 @@ def start(message):
     markup = types.ReplyKeyboardMarkup(row_width=2, resize_keyboard=True)
     btn1 = types.KeyboardButton('Рамадан - месяц надежды')
     btn2 = types.KeyboardButton('4 награды в месяц Рамадан')
-    btn3 = types.KeyboardButton('Нашид')
+    btn3 = types.KeyboardButton('Нашид - Рамадан')
     btn4 = types.KeyboardButton('No name')
     btn5 = types.KeyboardButton('No name')
     btn6 = types.KeyboardButton('No name')
