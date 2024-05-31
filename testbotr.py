@@ -70,6 +70,12 @@ def func (message):
         bot.send_message(message.chat.id, text =
                          'Приятного чтения ! http://islam.ru/content/veroeshenie/55127?utm_referrer=https%3A%2F%2Fzen.yandex.com&utm_campaign=dbr',
                            parse_mode='html', reply_markup=markup)
+    
+    
+    if message.text == 'No name':
+        bot.send_message(message.chat.id, text =
+                         'Контент не добавлен для этой кнопки',
+                           parse_mode='html', reply_markup=markup)
 
 
     
