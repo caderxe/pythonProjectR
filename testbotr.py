@@ -57,7 +57,7 @@ def func (message):
                          'Приятного просмотра ! https://youtu.be/MuHnPd6UJGI ', 
                             parse_mode='html', reply_markup=markup)
 
-    if message.text == 'Нашид - Рамадан':
+    elif message.text == 'Нашид - Рамадан':
          bot.send_message(message.chat.id, text=
                           'Приятного просмотра ! https://www.youtube.com/watch?v=P10zaYYuBa4 ', 
                           parse_mode='html', reply_markup=markup)
