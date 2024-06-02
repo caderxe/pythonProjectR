@@ -1,6 +1,9 @@
 import telebot
 import time
 from telebot import types
+from telegram import Animation
+from PIL import Image, ImageSequence
+import requests
 
 
 # TOKEN
@@ -42,7 +45,9 @@ def start(message):
     btn8, btn9, btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17,
     btn18, btn19, btn20, btn21, btn22, btn23, btn24, btn25, btn26 )
 
-    send_mess = f"<b> Мир вашему дому  {message.from_user.first_name} {message.from_user.last_name} ! </b>\nРекомендую посмотреть наш последний ролик : Дополненная Реальность "
+    
+
+    send_mess = f"<b>Мир вашему дому  {message.from_user.first_name} {message.from_user.last_name} </b>Рекомендуем посмотреть наш последний ролик:\n\n🆕 <b>Дополненная Реальность</b> "
     bot.send_message(message.chat.id,  send_mess,  parse_mode='html', reply_markup=markup)
 
 
@@ -192,7 +197,7 @@ def func (message):
 
     elif message.text == 'Серия 16 | Порнозависимость':
         bot.send_message(message.chat.id, text =
-                         'https://youtube/UgCoo55BRGQ?si=O-L8CieVUgGWHuOB',
+                         'https://youtu.be/UgCoo55BRGQ?si=nW5Iva7-W2HkmPbe',
                            parse_mode='html', reply_markup=markup)
         
 
