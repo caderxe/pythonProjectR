@@ -192,7 +192,7 @@ def func (message):
 
     elif message.text == 'Серия 16 | Порнозависимость':
         bot.send_message(message.chat.id, text =
-                         'https://youtu.be/UgCoo55BRGQ?si=O-L8CieVUgGWHuOB',
+                         'https://youtube/UgCoo55BRGQ?si=O-L8CieVUgGWHuOB',
                            parse_mode='html', reply_markup=markup)
         
 
