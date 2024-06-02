@@ -243,10 +243,7 @@ def func (message):
                            parse_mode='html', reply_markup=markup)
         
 
-    
-    
-    
-    
+
     
     elif message.text == 'Серия 28 | Материализм (новый секулярный порядок)':
         bot.send_message(message.chat.id, text =
