@@ -245,7 +245,7 @@ def func (message):
 
 
     
-    elif message.text == 'Серия 28 | Материализм (новый секулярный порядок)':
+    elif message.text == 'Серия 28 | Материализм':
         bot.send_message(message.chat.id, text =
                          'https://youtu.be/cW1JKGjHuoA?si=11hK7y2-P06H7grc',
                            parse_mode='html', reply_markup=markup)
